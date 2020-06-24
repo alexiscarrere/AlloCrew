@@ -88,7 +88,7 @@ class DiscussionController extends AbstractController
             if ($form['announcement']->isValid()) {
                 $announcement = $announcementRepository->find($form['announcement']->getData());
                 $discussion->setAnnouncement($announcement);
-            } else return new Response('Créateur Invalide', 400);
+            } else return new Response('Annonce Invalide', 400);
         }
 
         $discussion->setCreatedAt(new \Datetime());
